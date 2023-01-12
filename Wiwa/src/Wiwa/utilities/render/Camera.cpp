@@ -176,6 +176,9 @@ namespace Wiwa {
 		m_AspectRatio = width / (float)height;
 		m_NearPlaneDist = nearPlaneDistance;
 		m_FarPlaneDist = farPlaneDistance;
+
+		m_View = glm::mat4(1.0f);
+		m_View = glm::translate(m_View, glm::vec3(0.0f, 0.0f, -3.0f));
 	}
 	void Camera::DrawFrustrum()
 	{

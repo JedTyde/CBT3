@@ -107,8 +107,10 @@ namespace Wiwa {
 
 	void Renderer2D::Update()
 	{
+		glDisable(GL_DEPTH_TEST);
 		m_RenderCallsInstancedCount = 0;
 		UpdateInstanced();
+		glEnable(GL_DEPTH_TEST);
 	}
 
 	void Renderer2D::Close()

@@ -28,6 +28,8 @@
 #include "../EditorLayer.h"
 #include "../../Entities.h"
 
+#include <Wiwa/core/Renderer2D.h>
+
 #include <Wiwa/utilities/filesystem/FileSystem.h>
 
 ScenePanel::ScenePanel(EditorLayer* instance)
@@ -121,8 +123,9 @@ void ScenePanel::Draw()
     Wiwa::EntityManager& entityManager = Wiwa::SceneManager::getActiveScene()->GetEntityManager();
     
     //Wiwa::Application::Get().GetRenderer3D().SetActiveCamera(m_Camera);
-
-    ImTextureID tex = (ImTextureID)(intptr_t)m_Camera->frameBuffer->getColorBufferTexture();
+    
+    //ImTextureID tex = (ImTextureID)(intptr_t)m_Camera->frameBuffer->getColorBufferTexture();
+    ImTextureID tex = (ImTextureID)(intptr_t)Wiwa::Application::Get().GetRenderer2D().getColorBufferTexture();
     ImGui::SetCursorPos(cpos);
     //Wiwa::Application::Get().GetRenderer3D().RenderGrid();
     ImGui::Image(tex, isize, ImVec2(0, 1), ImVec2(1, 0));
