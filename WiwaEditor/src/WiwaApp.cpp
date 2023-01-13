@@ -27,11 +27,13 @@ public:
 		system->Update();
 
 		delete system;
-		ResourceId imgId = Wiwa::Resources::Load<Wiwa::Image>("Assets/samuel-l-jackson.jpg");
+		ResourceId imgId = Wiwa::Resources::Load<Wiwa::Image>("Assets/Mark.png");
 		Wiwa::Image* img = Wiwa::Resources::GetResourceById<Wiwa::Image>(imgId);
-		Wiwa::Vector2i position = {0, 0};
-		Wiwa::Size2i size = {380, 460};
-		Wiwa::Application::Get().GetRenderer2D().CreateInstancedQuadTex(img->GetTextureId(), position, size);
+		Wiwa::Vector2i position = {960,540};
+		Wiwa::Size2i size = img->GetSize()/4;
+		Wiwa::Rect2i rect = { 0,0,img->GetWidth()/2,img->GetHeight()/2};
+		Wiwa::Color4f color = Wiwa::Color::WHITE;
+		Wiwa::Application::Get().GetRenderer2D().CreateInstancedQuadTex(imgId, position, size, color, rect, Wiwa::Renderer2D::Pivot::CENTER);
 	}
 
 	~WiwaApp()
