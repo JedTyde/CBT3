@@ -50,6 +50,7 @@ namespace Wiwa {
 
 		EntityManager m_EntityManager;
 		CameraManager* m_CameraManager;
+		class ManagerUi* m_UiManager;
 	private:
 		State m_CurrentState = SCENE_ENTERING;
 		size_t m_TransitionTimer = 0;

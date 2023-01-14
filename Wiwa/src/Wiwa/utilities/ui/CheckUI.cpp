@@ -73,7 +73,6 @@ namespace Wiwa
 				state = UiState::NORMAL;
 				isPlaying = false;
 			}
-
 		}
 
 		return ret;
