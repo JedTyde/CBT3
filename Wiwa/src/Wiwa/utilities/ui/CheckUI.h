@@ -1,3 +1,4 @@
+#include <Wiwa/core/Renderer2D.h>
 #include <Wiwa/utilities/math/Vector2i.h>
 
 namespace Wiwa
@@ -6,7 +7,7 @@ namespace Wiwa
 	{
 	public:
 
-		CheckUi(int id, Rect2i bounds, ResourceId text, bool initState = false);
+		CheckUi(int id, Rect2i bounds, ResourceId spriteId, bool initState = false);
 		virtual ~CheckUi();
 
 		bool Update(float dt);
@@ -14,17 +15,18 @@ namespace Wiwa
 		bool GetValue() { return checked; };
 		void SetValue(bool state) { checked = state; };
 
-		int mouseX, mouseY;
-		Rect2i boundsCheck;
+		int mouseX, mouseY;		
 		unsigned int click;
 
+		Rect2i boundsCheck;
+		//ResourceId spriteIdCheck;
 		bool checked;
 
 		int onClickFX;
 		int onHoverFX;
 		bool isPlaying;
 
-		UiState state;
+		//UiState state;
 
 		bool canClick = true;
 };
