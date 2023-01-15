@@ -1,7 +1,7 @@
 #include <wipch.h>
 
 #include <Wiwa/core/Input.h>
-#include <Wiwa/utilities/ui/CheckUI.h>
+#include "CheckUi.h"
 #include <Wiwa/core/Renderer2D.h>
 #include <Wiwa/core/Application.h>
 #include <Wiwa/core/Window.h>
@@ -9,10 +9,10 @@
 
 namespace Wiwa
 {
-	CheckUi::CheckUi(int id, Rect2i bounds, ResourceId spriteId, bool initState)
+	CheckUi::CheckUi(int id, Rect2i bounds, ResourceId text, bool initState = false)
 	{
-		boundsCheck = bounds;
-		//spriteIdCheck = spriteId;
+		//this->boundsCheck = bounds;
+		//this->text = text;
 
 		canClick = true;
 
@@ -29,7 +29,7 @@ namespace Wiwa
 	{
 		bool ret = true;
 		
-		/*if (state != UiState::DISABLED)
+		if (state != UiState::DISABLED)
 		{
 			ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();
 
@@ -73,7 +73,7 @@ namespace Wiwa
 				isPlaying = false;
 			}
 
-		}*/
+		}
 
 		return ret;
 	}
