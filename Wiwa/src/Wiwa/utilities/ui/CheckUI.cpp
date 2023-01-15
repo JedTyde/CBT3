@@ -29,8 +29,7 @@ namespace Wiwa
 	{
 		bool ret = true;
 		
-		//NEED TO FIX STATE
-		if (state != UiState::DISABLED)
+		/*if (state != UiState::DISABLED)
 		{
 			ImVec2 viewportPanelSize = ImGui::GetContentRegionAvail();
 
@@ -74,7 +73,7 @@ namespace Wiwa
 				isPlaying = false;
 			}
 
-		}
+		}*/
 
 		return ret;
 	}

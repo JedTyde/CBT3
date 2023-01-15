@@ -3,7 +3,6 @@
 
 namespace Wiwa
 {
-	enum class UiState;
 	class CheckUi
 	{
 	public:
@@ -27,8 +26,7 @@ namespace Wiwa
 		int onHoverFX;
 		bool isPlaying;
 
-		//Need to fix STATE
-		UiState state;
+		//UiState state;
 
 		bool canClick = true;
 };
