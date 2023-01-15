@@ -1,7 +1,6 @@
 #include <wipch.h>
 #include "Scene.h"
 #include "SceneManager.h"
-#include <Wiwa/utilities/ui/ManagerUI.h>
 
 #include <Wiwa/core/Application.h>
 #include <Wiwa/ecs/systems/MeshRenderer.h>
